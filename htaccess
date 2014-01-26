@@ -1,0 +1,3 @@
+<FilesMatch "robots.txt">
+	Header set X-Robots-Tag "noindex"
+</FilesMatch>
