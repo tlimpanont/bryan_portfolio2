@@ -33,11 +33,16 @@
             jQuery(".left_bar").html('<a class="back_to_project_overview" href="#projects"><img src="images/back_arrow.png" alt="back arrow" />back to project overview</a>');
 
         },
+        addLeftNavigation: function() {
+            Page.prototype.addLeftNavigation.call(this, "body");
+            jQuery("nav").find("ul li a[href='" + "#projects" + "']").addClass("active");
+            jQuery("nav ul").prepend('<li><a class="back_to_project_overview" href="#/projects"><img src="images/back_arrow.png" alt="back arrow" />back</a></li>');
+        },
         reset: function(callback) {
         	
         	jQuery("center.project_item_container").slideUp(function() {
 	        	jQuery(this).remove();
-	        	jQuery(".left_bar").html('');
+	        	jQuery("nav ul li a.back_to_project_overview").parent().remove();
 	        	jQuery("#mainSwiper").fadeIn(callback);
         	});
         	

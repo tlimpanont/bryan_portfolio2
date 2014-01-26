@@ -8,6 +8,29 @@
         positionAssets: function () {
         	this.positionAssets();
         },
+        addLeftNavigation: function(element) {
+          
+            jQuery("nav").remove();
+
+            if(element == undefined)
+                   element = "#"+this.$el.attr("id");
+
+            jQuery(element)
+            .prepend(jQuery("#leftNavigationTemplate").html()); 
+
+            jQuery("nav .leftnav_vertical_bar").height(
+                    jQuery(window).height() -  jQuery("nav .leftnav_vertical_bar").height()
+            );
+
+            jQuery("nav").find("ul li a").removeClass("active");
+            jQuery("nav").find("ul li a[href='" + window.location.hash.toString() + "']").addClass("active");
+
+            jQuery("nav").show();
+          
+        },
+        addRightNavigation: function() {
+
+        },
         addTopNavigation: function () {
 
             if (jQuery("nav").size() <= 0)
@@ -18,8 +41,6 @@
             jQuery("nav").find("ul li a[href='" + window.location.hash.toString() + "']").addClass("active");
                        	
             jQuery(window).on("resize", jQuery.proxy(this, "positionLeftRightNavBar"));
-
-
         },
         positionLeftRightNavBar: function () {
             var $left_bar = jQuery("nav").find(".left_bar");

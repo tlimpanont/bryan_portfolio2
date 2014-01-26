@@ -24,8 +24,8 @@
                         break;
                     case 1:
                         window.location.hash = '#projects';
-                        // add topNavigation because this page needs it
-                        projectsPage.addTopNavigation();
+                        // add left navigation on the current page slide
+                        projectsPage.addLeftNavigation();
 						
                         break;
                     case 2:
@@ -34,7 +34,7 @@
                         jQuery("body").off("keyup", jQuery.proxy(projectsPage, "keyboardHandler"));
                         // add topNavigation because this page needs it
 						//alert("slide to ABOUT");
-                        aboutPage.addTopNavigation();
+                        aboutPage.addLeftNavigation();
 						
                         break;
                 }
@@ -150,13 +150,12 @@
         
         AppRouter.on("route:project_detail", function (project_id) {
 			 jQuery(window).off("mousewheel", jQuery.proxy(aboutPage, "scrollHandler"));
-        	 projectDetailPage.addTopNavigation();
+        	 projectDetailPage.addLeftNavigation();
         	 projectDetailPage.showProjectTemplate(project_id);			
         });
 
         jQuery(document).click(function(e) {
             var x = e.pageX - $(e.target).offset().left;
-            console.log(x);
         });
 
         // Start Backbone history a necessary step for bookmarkable URL's

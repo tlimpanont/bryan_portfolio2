@@ -28,7 +28,7 @@
 		 		var $slide = jQuery(slide);
 		 		$slide.position({
 			 		at: "center center",
-			 		my: "center center+"+92/2,
+			 		my: "center center+"+0/2,
 			 		of: $slide.parent(),
 			 		collision: "none"
 	 			});
@@ -80,7 +80,7 @@
 			
 			this.$el.find("a.go_projects_btn").position({
 		       	my: "center center",
-		        at: "center-"+((this.$el.width() / 2)-(this.$el.find("a.go_projects_btn").outerWidth() / 2) - 20)+" center+92",
+		        at: "center-"+((this.$el.width() / 2)-(this.$el.find("a.go_projects_btn").outerWidth() / 2) - 20)+" center+0",
 		        of: this.$el,
 		        collision: "none"
 	      	});

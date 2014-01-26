@@ -44,7 +44,7 @@
             //left center of the projectItemsContainer
             this.$el.find("a.go_home_btn").position({
                 my: "center center",
-                at: "center-" + ((this.$el.width() / 2) - (this.$el.find("a.go_home_btn").outerWidth() / 2) - 20) + " center+92",
+                at: "center-" + ((this.$el.width() / 2) - (this.$el.find("a.go_home_btn").outerWidth() / 2) - 20) + " center+0",
                 of: this.$el,
                 collision: "none"
             });
@@ -52,7 +52,7 @@
              //right center of the projectItemsContainer
             this.$el.find("a.go_about_btn").position({
                 my: "center center",
-                at: "center+" + ((this.$el.width() / 2) - (this.$el.find("a.go_about_btn").outerWidth() / 2) - 20) + " center+92",
+                at: "center+" + ((this.$el.width() / 2) - (this.$el.find("a.go_about_btn").outerWidth() / 2) - 20) + " center+0",
                 of: this.$el,
                 collision: "none"
             });
@@ -65,18 +65,6 @@
             });
 
          
-           /* var source = "";
-            jQuery(".nav_btn").hover(
-	            function() {
-	            	source = jQuery(this).find("img").attr("src").toString();
-	            	var result = source.match(/[^\/]+\w+$/)[0].toString();
-	            	
-	            	jQuery(this).find("img").attr("src", "images/" + "A" + result);
-	            }, 
-	            function() {
-	            	jQuery(this).find("img").attr("src", source);
-	            }
-	        );*/
         },
         keyboardHandler: function (e) {
             if (e.keyCode == 37) { // left

@@ -198,44 +198,61 @@ nav img.nav_logo{
 }
 
 nav ul {
-	display: block;
-	padding: 0; margin: 0;
-	margin-top: 30px;
-	
+	list-style: none;
+	margin: 0;
+	padding: 30px 20px;
 }
 
 nav ul li {
-	display: inline;
-	padding: 0;
-	margin: 0 0 0 30px;
+	padding: 20px 0;
+	border-bottom: 1px solid #e7e7e7;
+	text-align: center;
 }
+
 
 nav ul li a:link, nav ul li a:visited  {
 	text-decoration: none;
 	font-family: CasperRegular;
 	color: #c7825f;
-	font-size: 1.4em;
+	font-size: 1.3em;
 	text-transform: lowercase;
 }
 
 nav ul li a:hover, nav ul li a.active {
-	text-decoration: underline;
+	text-decoration: none;
 	color: #353535;
 }
 
+nav img.leftnav_logo {
+	display: block;
+	position: absolute;
+	top: 0; left: 0;
+	z-index: 999;
+}
+
+nav div.leftnav_vertical_bar {
+	position: absolute;
+	width: 114px;
+	/* dynamic leftnav_logo.height() - window.height */
+	top: 106px;
+	left: 0;
+	background-color: white;
+}
+
+
 .back_to_project_overview {
 	font-family: CasperRegular, Arial, Verdana; 
-	color: #c7825f;	
-	margin-top: 30px;
+	color: #c7825f;
 	display: block;
 	margin-left: 20px;
 	font-size: 1.4em;
 	text-decoration: none;
 }
+
 .back_to_project_overview img {
-	margin-top: -3px;
-	margin-right: 4px;
-	display: block;
+	margin-top: -2px;
+	margin-left: -20px;
+	display: inline-block;
 	float: left;
 }
 
@@ -281,7 +298,6 @@ a.go_to_detail:hover {
 .project_detail_item {
 /* 	display: none; */
 	width: 960px;
-	padding-top: 80px;
 }
 
 .project_description p {
