@@ -36,9 +36,10 @@
             });
             // center of the page, padding-top in style.css
             this.$el.find(".macmonitor.xycenter").position({
-                at: "center top",
-                my: "center top",
-                of: this.$el
+                at: "center center",
+                my: "center center",
+                of: this.$el,
+                collision: "none"
             });
             
             //left center of the projectItemsContainer
@@ -59,9 +60,10 @@
             
             // the screen background of the iMac monitor
             jQuery(".projectItemsContainer").position({
-                my: "center top",
-                at: "center top",
-                of: this.$el
+                my: "left+38 top+36",
+                at: "left top",
+                of: this.$el.find(".macmonitor.xycenter"),
+                collision: "none"
             });
 
          

@@ -88,13 +88,13 @@ img{
 	background-size: cover; 
 	/*background: url('../images/backgrounds/easter_bg.jpg');*/
 }
-.projectItemsContainer {
+/*.projectItemsContainer {
 	position: absolute;
-	padding-top: 155px;
+	padding-top: 90px;
 }
 img.macmonitor {
-	padding-top: 120px;
-}
+	padding-top: 57px;
+}*/
 
 
 #projectsSwiper.swiper-container {
@@ -214,13 +214,20 @@ nav ul li a:link, nav ul li a:visited  {
 	text-decoration: none;
 	font-family: CasperRegular;
 	color: #c7825f;
-	font-size: 1.3em;
+	font-size: 1.25em;
 	text-transform: lowercase;
 }
 
 nav ul li a:hover, nav ul li a.active {
 	text-decoration: none;
 	color: #353535;
+	/*background: url('../images/tiny_arrow_right.png') 20px 20px no-repeat;*/
+}
+
+img.tiny_arrow_right {
+	position: absolute;
+	right: 11px;
+	padding-top: 6px;
 }
 
 nav img.leftnav_logo {

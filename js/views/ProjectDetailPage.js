@@ -36,7 +36,9 @@
         addLeftNavigation: function() {
             Page.prototype.addLeftNavigation.call(this, "body");
             jQuery("nav").find("ul li a[href='" + "#projects" + "']").addClass("active");
-            jQuery("nav ul").prepend('<li><a class="back_to_project_overview" href="#/projects"><img src="images/back_arrow.png" alt="back arrow" />back</a></li>');
+            jQuery("nav ul").prepend('<li><a class="back_to_project_overview" href="#projects"><img src="images/back_arrow.png" alt="back arrow" />back</a></li>');
+            jQuery("nav").find("ul li a.active").prepend("<img src='images/tiny_arrow_right.png' alt='' class='tiny_arrow_right'/>")
+
         },
         reset: function(callback) {
         	
