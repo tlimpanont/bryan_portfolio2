@@ -7,6 +7,15 @@
   <link rel="stylesheet" href="css/idangerous.swiper.css">
   <link rel="stylesheet" type="text/css" href="css/idangerous.swiper.scrollbar.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <script type="text/template" id="rightNavigationTemplate">
+    <nav>
+        <div class="top_bar"></div>
+        <div class="bottom_bar"></div>
+        <img src="images/home_next_section.png" width="114" height="91" alt="Home next  section" class="home_next_section"/>
+    </nav>
+  </script>
+
   <script type="text/template" id="topNavigationTemplate">
     <nav>
     <div class="left_bar">
@@ -157,10 +166,16 @@ and my progress as a designer.
   <div class="swiper-wrapper">
      <!-- HOME SLIDE -->
     <div id="page-home" class="swiper-slide background_cover">
-      <img id="home_logo" src="images/homepage_visual.png" alt="Visual Designer, Bryan Vink" />
-      <a href="#projects" class="next_slide" >
-        <img src="images/arrow_right.png" alt="Arrow indicate next page" title="Go to my projects" />
+      <div class="top_bar"></div>
+      <div class="bottom_bar"></div>
+      <a href="#projects">
+        <img src="images/home_next_section.png" width="114" height="91" alt="Home next  section" class="home_next_section"/>
       </a>
+      <img id="home_logo" src="images/homepage_visual.png" alt="Visual Designer, Bryan Vink" />
+          
+      <!-- <a href="#projects" class="next_slide" >
+        <img src="images/arrow_right.png" alt="Arrow indicate next page" title="Go to my projects" />
+      </a> -->
     </div> 
     <!-- END HOME SLIDE -->
     

@@ -9,7 +9,10 @@
         	this.positionAssets();
         },
         addLeftNavigation: function(element) {
-          
+            var animation = false;
+            if(window.oldHash == undefined || window.oldHash == "/")
+                animation = true; 
+           
             jQuery("nav").remove();
 
             if(element == undefined)
@@ -26,11 +29,19 @@
             jQuery("nav").find("ul li a[href='" + window.location.hash.toString() + "']").addClass("active");
             jQuery("nav").find("ul li a.active").prepend("<img src='images/tiny_arrow_right.png' alt='' class='tiny_arrow_right'/>")
 
-            jQuery("nav").show();
-          
-        },
-        addRightNavigation: function() {
-
+            if(animation)
+            {
+                jQuery("nav").show().css({
+                    left: -($("nav .leftnav_vertical_bar").width())
+                }).animate({
+                    left: 0   
+                });
+            }
+            else
+            {
+                jQuery("nav").show();
+            }
+            
         },
         addTopNavigation: function () {
 

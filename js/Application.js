@@ -1,7 +1,14 @@
 (function (window, _, Backbone, jQuery) {
-    
+
+    window.onhashchange = function(e) {
+        window.oldURL = e.oldURL; 
+        window.newURL = e.newURL; 
+        window.oldHash = oldURL.split("#")[1];
+        window.newHash = newURL.split("#")[1];
+    };
+
     window.allAssetsLoaded = function (complete_event) { // allAssetsLoaded function
-            
+          
         mainSwiper = new Swiper('#mainSwiper', {
 
             mousewheelControl: false,
@@ -16,11 +23,10 @@
 
                 switch (mainSwiper.activeIndex) {
                     case 0:
-						window.location.hash = '#';
+						window.location.hash = '/';
                         // no need keyboard functionalities when we on this page
                         jQuery("body").off("keyup", jQuery.proxy(projectsPage, "keyboardHandler"));
-                        jQuery("nav").fadeOut();
-						
+						jQuery("nav").fadeOut();
                         break;
                     case 1:
                         window.location.hash = '#projects';
@@ -132,9 +138,11 @@
             
             mainSwiper.swipeTo(1);
         });
-        
+
+       
+                
         AppRouter.on("route:about", function() {
-           	// switch back to about page when we started from the project detail page
+            // switch back to about page when we started from the project detail page
 			if(jQuery("#mainSwiper").is(":hidden"))
 			{
 				projectDetailPage.reset(function() {
@@ -160,6 +168,8 @@
 
         // Start Backbone history a necessary step for bookmarkable URL's
         Backbone.history.start();
+
+
 
     } // ended allAssetsLoaded function
 
