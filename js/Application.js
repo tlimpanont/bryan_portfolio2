@@ -16,10 +16,6 @@
                 aboutSwiper.swipeTo(0);
             },
             onSlideChangeEnd: function () {
-               
-                jQuery("nav").find("img.nav_logo").stop(true, false).animate({
-                    "background-color" : jQuery("body").css("background-color")
-                });
 
                 switch (mainSwiper.activeIndex) {
                     case 0:
@@ -44,6 +40,13 @@
 						
                         break;
                 }
+
+                setTimeout(function() {
+                    jQuery("nav").find("img.leftnav_logo").stop(true, false).animate({
+                        "background-color" : jQuery("body").css("background-color")
+                    });
+
+                }, 100);
             }
         });
        

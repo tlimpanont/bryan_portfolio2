@@ -96,7 +96,7 @@
 				"background-color" : $activeSlide.data("bgcolor")
 			});
 
-			jQuery("nav").find("img.nav_logo").stop(true, false).animate({
+			jQuery("nav").find("img.leftnav_logo").stop(true, false).animate({
 				"background-color" : $activeSlide.data("bgcolor")
 			});
 		}
