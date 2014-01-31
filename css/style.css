@@ -90,13 +90,14 @@ img{
 }
 
 
-/*.projectItemsContainer {
-	position: absolute;
-	padding-top: 90px;
-}
-img.macmonitor {
-	padding-top: 57px;
-}*/
+
+.projectItemsContainer {
+ 	position: absolute;
+ 	padding-top: 120px;
+ }
+ img.macmonitor {
+ 	padding-top: 120px;
+ }
 
 
 #projectsSwiper.swiper-container {
