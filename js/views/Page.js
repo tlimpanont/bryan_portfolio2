@@ -9,6 +9,8 @@
         	this.positionAssets();
         },
         addLeftNavigation: function(element) {
+            
+
             var animation = false;
             if(window.oldHash == undefined || window.oldHash == "/")
                 animation = true; 
@@ -31,10 +33,18 @@
 
             if(animation)
             {
+                jQuery("footer").css({
+                    bottom: -$("footer").outerHeight() + "px"
+                });
+
                 jQuery("nav").show().css({
                     left: -($("nav .leftnav_vertical_bar").width())
                 }).animate({
                     left: 0   
+                }, function() {
+                    $("footer").animate({
+                        bottom: 93
+                    });
                 });
             }
             else
@@ -42,6 +52,18 @@
                 jQuery("nav").show();
             }
             
+            /**
+             * Send mail without front-end template mail:to, preventing spam
+             * @param  {Object} e Click event Object
+             */
+            jQuery("#mail").click(function(e) {
+                var mail = 'mailto:b.vink83@gmail.com';
+                var a = document.createElement('a');
+                a.href = mail;
+                a.click();
+
+                e.preventDefault();
+            })
         },
         addTopNavigation: function () {
 

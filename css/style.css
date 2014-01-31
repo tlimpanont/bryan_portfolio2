@@ -378,3 +378,44 @@ a.go_to_detail:hover {
 	background-repeat: no-repeat;
 	background-position: center center; 
 }
+
+footer {
+	position: absolute;
+	display: block;
+	height: 100px;
+	width: 114px;
+	bottom: 93px;
+	background: url('../images/footer_description.png') center bottom 25px no-repeat #353535;
+}
+footer a.social_media {
+	position: relative;
+	float: left;
+	width: 57px;
+	height: 40px;
+	display: block;
+}
+
+footer a.social_media#linkedin {
+	background: url('../images/linkedin.png') center center #353535 no-repeat;
+	transition: background-color 0.2s linear;
+	-webkit-transition: background-color 0.2s linear;
+}
+
+footer a.social_media#mail {
+	background: url('../images/envelope.png') center center #353535 no-repeat;
+	transition: background-color 0.2s linear;
+	-webkit-transition: background-color 0.2s linear;
+}
+
+footer a.social_media#mail:hover {
+	background-color: #c7825f;
+}
+
+footer a.social_media#linkedin:hover {
+	background-color: #0274b3;
+}
+
+a.reverse {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
