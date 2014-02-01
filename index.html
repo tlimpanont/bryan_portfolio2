@@ -54,23 +54,7 @@
 
   <script type="text/template" id="projectDetailPagesTemplate">
 
-   	  <!-- ENECO -->
-      <div id="eneco" class="project_detail_item" data-bgcolor="#7b091f">
-        <span class="project_category">commercial</span>
-    <img src="images/eneco_branding.png" class="project_detail_branding" alt="Eneco Branding"/>
-    
-        <div class="project_description">
-          
-          <p>This Rotterdam based energy company <br />
-wanted a new recruitementsite where the <br />
-employees would really tell you how <br />
-awsome there job is and how you <br />
-can be part of it</p>
-        </div>
-      <img src="images/eneco_detail.png" alt="Eneco Project Page" />  
-      </div>
-      
-      <!-- END ENECO -->
+   	  
 
 
     <!-- TRACK PRO -->
@@ -81,7 +65,7 @@ can be part of it</p>
         <div class="project_description">
           <p>TrackPro is a <br />
 collaborative project with good friend Theuy Limpanont.  <br />
-We wanted to make an webapp where you can follow your favorite professional player(s). With the start of Euro 2012 this could be a valuable source of information to stay on track with your favorite player. I did the design and partly concept.</p>
+We wanted to make an webapp where you can follow your favorite professional player(s). With the start of Euro 2012 this could be a valuable source of information to stay on track with your favorite player. <br /> I did the design and partly concept.</p>
 
         </div>
       <img src="images/trackpro_detail.png" alt="TrackPro Project Page" />  
@@ -98,8 +82,8 @@ We wanted to make an webapp where you can follow your favorite professional play
         <div class="project_description">
           <p>
             In order to communicate the varity of careers <br />
-with Brunel, we came up with a activation campaign. 
-The creative idea was visualised as 7 online resume flipbooks. 
+with Brunel, we came up with a activation campaign. <br />
+The creative idea was visualised as 7 online resume flipbooks. <br />
 I did the ux and design of the resume flipbooks.
           </p>
 
@@ -123,9 +107,9 @@ I did the ux and design of the resume flipbooks.
       <img src="images/nhec_branding.png" class="project_detail_branding" alt="NHEC Branding"/>
     
         <div class="project_description">
-         <p>North-Hollands Energy Coöperation is a 
-energy company that provides 'green' energy and gas 
-troughout Holland, mostly in North Holland. I was involved in designing a restyle of their site.</p>
+         <p>Noordhollandse Energy Coöperation is a <br />
+energy company that provides 'green' energy and gas <br />
+troughout Holland, mostly in North Holland. I was involved in <br />designing a restyle of their site.</p>
 
         </div>
       <img src="images/nhec_detail.png" alt="NHEC Project Page" />  
@@ -145,7 +129,7 @@ troughout Holland, mostly in North Holland. I was involved in designing a restyl
 between a Amsterdam based ad agency and <br />
 your childrens favorite breakfast brand. <br />
 Ending a relationship is never easy but <br />
-I  made this last gift at least more bareable  <br />
+I  made this last gift at least more bareable. <br />
          </p>
         </div>
       <img src="images/fred_detail.png" alt="Fred & Ed page" /> 
@@ -174,6 +158,24 @@ and my progress as a designer.
       </div>
       
       <!-- END OUDE PORTFOLIO -->
+
+      <!-- ENECO -->
+      <div id="eneco" class="project_detail_item" data-bgcolor="#7b091f">
+        <span class="project_category">commercial</span>
+    <img src="images/eneco_branding.png" class="project_detail_branding" alt="Eneco Branding"/>
+    
+        <div class="project_description">
+          
+          <p>This Rotterdam based energy company <br />
+wanted a new recruitementsite where the <br />
+employees would really tell you how <br />
+awsome there job is and how you <br />
+can be part of it.</p>
+        </div>
+      <img src="images/eneco_detail.png" alt="Eneco Project Page" />  
+      </div>
+      
+      <!-- END ENECO -->
       
   </script>
 </head>
@@ -223,11 +225,11 @@ and my progress as a designer.
                 <div class="swiper-wrapper">
                     
                      <!-- PROJECTS INSTRUCTION: not part of the project swipe items -->
-                    <div class="swiper-slide" style="background: url('images/projects_instruction.png') no-repeat;">
-                        <div class="instruction_text">
+                    <div class="swiper-slide" id="projects_instruction" style="background: url('images/projects_instruction.png') no-repeat;">
+                        <!-- <div class="instruction_text">
                             <span>Navigation</span>
                             <span>Navigate through projects by</span>
-                        </div>
+                        </div> -->
                         <!-- <a href=""  class="ok_btn" ><img src="images/ok_btn.png" alt="Ok knop" /></a> -->
                           <a class="go_to_detail ok_btn" href="#" style="font-size: 1.2em; width: 130px; text-align: center;">ok </a>
                     </div>
@@ -336,7 +338,7 @@ and my progress as a designer.
           <div class="swiper-slide" data-bgcolor="#020d22" >
               <div class="waypoint" style="background: url('images/sterrenbeeld.png');" ></div>
               <span class="about_main_title" data-margin="60px 0 0 0" style="font-size: 7.2em;">personality</span>
-              <span class="about_sub_title" data-margin="2px 0 0 -70px">There it is, a lion at heart</span>
+              <span class="about_sub_title" data-margin="6px 0 0 -70px">There it is, a lion at heart</span>
           </div>
           <!-- END STERRENBEELD -->
 
@@ -385,6 +387,7 @@ and my progress as a designer.
 
 
   <!-- PLUGINS AND LIBS -->
+  <script type="text/javascript" src="js/libs/mordernizr-touch-events.js"></script>
   <script type="text/javascript" src="js/libs/jquery-1.10.1.min.js"></script>
   <script type="text/javascript" src="js/libs/preload.min.js"></script>
   <script type="text/javascript" src="js/libs/underscore-min.js"></script>
